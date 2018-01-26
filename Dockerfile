@@ -13,3 +13,6 @@ EXPOSE 22
 EXPOSE 5901
 EXPOSE 443
 
+# AppDef
+COPY AppDef.json /etc/NAE/AppDef.json
+
