@@ -8,7 +8,7 @@
         "Software Development"
     ],
     "machines": [
-        "ng*"
+        "n[0-9]"
     ],
     "vault-types": [
         "FILE",
