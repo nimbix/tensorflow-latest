@@ -14,5 +14,5 @@ EXPOSE 5901
 EXPOSE 443
 
 # AppDef
-COPY AppDef_cpu.json /etc/NAE/AppDef.json
+COPY AppDef-cpu.json /etc/NAE/AppDef.json
 
