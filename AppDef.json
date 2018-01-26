@@ -8,7 +8,10 @@
         "Software Development"
     ],
     "machines": [
-        "ng*"
+        "ng[4-9]",
+        "ngd[4-9]",
+        "ngq*",
+        "ngo*"
     ],
     "vault-types": [
         "FILE",
