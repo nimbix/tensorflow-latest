@@ -1,0 +1,40 @@
+{
+    "name": "TensorFlow 2.2.2 GPU Notebook",
+	"description": "Jupyter notebook with GPU-enabled TensorFlow 2.2.2 and Python 3",
+	"author": "Nimbix, Inc.",
+	"licensed": true,
+	"classifications": [
+	    "Machine Learning/Deep Learning"
+	],
+	"machines": [
+	    "ng*"
+	],
+	"vault-types": [
+	    "FILE",
+	"BLOCK",
+	"BLOCK_ARRAY",
+	"OBJECT"
+	],
+	"commands": {
+	    "Notebook": {
+		"path": "/usr/local/bin/nimbix_notebook",
+		"name": "Launch notebook",
+		"interactive": true,
+		"description": "Start Jupyter notebook with Python 3 and TensorFlow",
+		"url": "https://%PUBLICADDR%/?token=%RANDOM64%",
+		"parameters": {
+		    "-r": {
+			"name": "Requirements file",
+			"description": "Path to requirements.txt file",
+			"type": "FILE",
+			"required": false,
+			"positional": false
+		    }
+		}
+	    }
+	},
+	"image": {
+	    "type": "image/png",
+	    "data": ""
+	}
+}
