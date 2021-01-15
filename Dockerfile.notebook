@@ -3,6 +3,8 @@ FROM tensorflow/tensorflow:2.2.2-gpu-py3
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/${BRANCH:-master}/install-notebook-common /tmp/install-notebook-common
 RUN bash /tmp/install-notebook-common -b master -c -3 && rm /tmp/install-notebook-common
 
+RUN mkdir /data && chmod 01777 /data
+
 EXPOSE 443
 
 COPY AppDef-notebook.json /etc/NAE/AppDef.json
