@@ -1,6 +1,6 @@
 {
-    "name": "TensorFlow 2.2.2 GPU Notebook",
-    "description": "Jupyter notebook with GPU-enabled TensorFlow 2.2.2 and Python 3",
+    "name": "TensorFlow 2.10.0 GPU Notebook",
+    "description": "Jupyter notebook with GPU-enabled TensorFlow 2.10.0 and Python 3",
     "author": "Nimbix, Inc.",
     "licensed": true,
     "classifications": [

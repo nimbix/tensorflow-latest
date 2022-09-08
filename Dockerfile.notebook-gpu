@@ -1,13 +1,13 @@
-FROM tensorflow/tensorflow:2.2.2-gpu-py3
+FROM tensorflow/tensorflow:2.10.0-gpu
 
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/${BRANCH:-master}/install-notebook-common /tmp/install-notebook-common
-RUN bash /tmp/install-notebook-common -b master -c -3 && rm /tmp/install-notebook-common
+RUN bash /tmp/install-notebook-common -b master -3 && rm /tmp/install-notebook-common
 
 RUN mkdir /data && chmod 01777 /data
 
 EXPOSE 443
 
-COPY AppDef-notebook.json /etc/NAE/AppDef.json
-RUN curl --fail --insecure -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
+COPY NAE/AppDef-notebook-gpu.json /etc/NAE/AppDef.json
+RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://cloud.nimbix.net/api/jarvice/validate
 
 RUN mkdir -p /etc/NAE && touch /etc/NAE/{screenshot.png,screenshot.txt,license.txt,AppDef.json}
