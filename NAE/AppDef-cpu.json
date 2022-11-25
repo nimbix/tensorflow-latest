@@ -1,14 +1,14 @@
 {
-    "name": "TensorFlow (CPU only) - Community version",
-    "description": "Community version of TensorFlow for x86 CPU only, pulled from tensorflow/tensorflow:latest",
-    "author": "tensorflow.org",
+    "name": "TensorFlow 2.10.0 (CPU only)",
+    "description": "Community version of TensorFlow for x86 CPU only.",
+    "author": "Nimbix, Inc.",
     "licensed": true,
     "classifications": [
         "Artificial Intelligence/Machine Learning/Deep Learning",
         "Software Development"
     ],
     "machines": [
-        "n[0-9]"
+        "n*"
     ],
     "vault-types": [
         "FILE",
@@ -16,6 +16,7 @@
         "BLOCK_ARRAY",
         "OBJECT"
     ],
+    "scale_max": 1,
     "commands": {
         "Batch": {
             "path": "/bin/bash",
@@ -48,27 +49,12 @@
                 }
             }
         },
-        "Server": {
+        "Desktop": {
             "path": "/sbin/init",
             "interactive": true,
-            "name": "Server",
+            "name": "Desktop",
             "description": "Launch a session with all boot services, including SSH (if installed).  Connection address and credentials will appear in your web browser once available.",
             "parameters": {}
-        },
-        "GUI": {
-            "path": "/usr/local/bin/nimbix_desktop",
-            "interactive": true,
-            "name": "GUI",
-            "description": "Run a GUI command, and connect interactively directly from your web browser (requires Nimbix Desktop in image).",
-            "parameters": {
-                "command": {
-                    "name": "Command",
-                    "description": "Command to run",
-                    "type": "STR",
-                    "positional": true,
-                    "required": true
-                }
-            }
         }
     },
     "image": {

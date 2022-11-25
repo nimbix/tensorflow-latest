@@ -15,6 +15,7 @@
         "BLOCK_ARRAY",
         "OBJECT"
     ],
+    "scale_max": 1,
     "commands": {
         "Notebook": {
             "path": "/usr/local/bin/nimbix_notebook",
