@@ -1,8 +1,9 @@
 {
-    "name": "TensorFlow 2.10.0 Notebook (CPU)",
-    "description": "Jupyter notebook with TensorFlow 2.10.0 and Python 3",
+    "name": "TensorFlow 2.11.0 Notebook (CPU)",
+    "description": "Jupyter notebook with TensorFlow 2.11.0 and Python 3",
     "author": "Nimbix, Inc.",
     "licensed": true,
+    "appdefversion": 2,
     "classifications": [
         "Machine Learning/Deep Learning"
     ],

@@ -24,7 +24,7 @@
             "name": "Launch notebook",
             "interactive": true,
             "description": "Start Jupyter notebook with Python 3 and TensorFlow",
-            "url": "https://%PUBLICADDR%/tree?token=%RANDOM64%",
+            "url": "http://%PUBLICADDR%:8888?token=%RANDOM64%",
             "parameters": {
                 "-r": {
                     "name": "Requirements file",

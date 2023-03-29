@@ -1,10 +1,10 @@
-FROM tensorflow/tensorflow:2.10.0
+FROM tensorflow/tensorflow:2.11.0
 LABEL maintainer="Nimbix, Inc." \
       license="BSD"
 
 # Update SERIAL_NUMBER to force rebuild of all layers (don't use cached layers)
 ARG SERIAL_NUMBER
-ENV SERIAL_NUMBER ${SERIAL_NUMBER:-20220923.1001}
+ENV SERIAL_NUMBER ${SERIAL_NUMBER:-20221228.1000}
 
 # Install the rest of the packages...
 COPY requirements.txt /tmp/requirements.txt

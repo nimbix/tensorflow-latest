@@ -1,8 +1,9 @@
 {
-    "name": "TensorFlow 2.9.2 (GPU)",
+    "name": "TensorFlow 2.11.0 (GPU)",
     "description": "Community version of TensorFlow with GPU support",
     "author": "Nimbix, Inc.",
     "licensed": true,
+    "appdefversion": 2,
     "classifications": [
         "Artificial Intelligence/Machine Learning/Deep Learning",
         "Software Development"
@@ -50,7 +51,7 @@
             }
         },
         "Desktop": {
-            "path": "/sbin/init",
+            "path": "/usr/local/bin/nimbix_desktop",
             "interactive": true,
             "name": "Desktop",
             "description": "Launch a session with all boot services, including SSH (if installed).  Connection address and credentials will appear in your web browser once available.",
