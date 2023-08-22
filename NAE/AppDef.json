@@ -83,7 +83,7 @@
             }
         },
         "Desktop": {
-            "path": "xfce4-terminal -T TensorFlow --working-directory=/data/",
+            "path": "/usr/local/scripts/start-desktop.sh",
             "interactive": true,
             "desktop": true,
             "name": "Desktop",
