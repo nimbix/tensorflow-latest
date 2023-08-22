@@ -1,0 +1,4 @@
+Dockerfile.*
+runTests.sh
+NAE/AppDef-*
+tests/*
