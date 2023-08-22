@@ -88,6 +88,7 @@
             "desktop": true,
             "name": "Desktop",
             "description": "Launch a session with all boot services, including SSH (if installed).  Connection address and credentials will appear in your web browser once available.",
+            "url": "https://%PUBLICADDR%:5902/vnc.html?password=%NIMBIXPASSWD%&autoconnect=true&reconnect=true",
             "parameters": {}
         }
     },
