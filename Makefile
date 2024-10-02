@@ -1,5 +1,9 @@
+VERSION := 2.17.0
+DATE := $(shell date +"%Y-%m-%d")
+IMAGE := us-docker.pkg.dev/jarvice/images/tensorflow:$(VERSION)-$(DATE)
+
 all:
-	DOCKER_BUILDKIT=1 docker build --pull --rm -f "Dockerfile" -t us-docker.pkg.dev/jarvice/images/tensorflow:2.13.0 "."
+	podman build --pull --rm -f "Dockerfile" -t $(IMAGE) "."
 
 push: all
-	docker push us-docker.pkg.dev/jarvice/images/tensorflow:2.13.0
+	podman push $(IMAGE)
