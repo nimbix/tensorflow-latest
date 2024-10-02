@@ -35,7 +35,7 @@ nbclient
 nbconvert
 nbformat
 nest-asyncio
-numpy
+numpy<2.0.0
 packaging
 pandas
 pandocfilters
