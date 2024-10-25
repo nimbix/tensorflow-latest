@@ -27,8 +27,14 @@
 # those of the authors and should not be interpreted as representing official
 # policies, either expressed or implied, of Nimbix, Inc.
 
+set -e
+
 # Source the JARVICE job environment variables
 [[ -r /etc/JARVICE/jobenv.sh ]] && source /etc/JARVICE/jobenv.sh
 [[ -r /etc/JARVICE/jobinfo.sh ]] && source /etc/JARVICE/jobinfo.sh
+
+# May need to check the nvidia driver and cuda versions to make sure this app will work with gpus
+. "$(dirname "$0")/check-gpu.sh"
+checkGPU
 
 exec xfce4-terminal -T TensorFlow --working-directory=/data
