@@ -55,6 +55,10 @@ while [[ -n "$1" ]]; do
     shift
 done
 
+# May need to check the nvidia driver and cuda versions to make sure this app will work with gpus
+. "$(dirname "$0")/check-gpu.sh"
+checkGPU
+
 # default internal Jupyter port is 5902 unless overridden
 PORTNUM=${JARVICE_SERVICE_PORT:-5902}
 [[ -z "${PORT}" ]] && PORT=$PORTNUM
