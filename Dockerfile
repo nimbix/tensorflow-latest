@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.17.0-gpu
+FROM tensorflow/tensorflow:2.18.0-gpu
 LABEL maintainer="Nimbix, Inc." \
       license="BSD"
 
@@ -12,14 +12,8 @@ RUN python3.11 -m pip install --upgrade pip && \
     SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True python3.11 -m pip install -r /tmp/requirements.txt --no-cache-dir && \
     python3.11 -m pip install jupyter --no-cache-dir
 
-# # Add notebook common
-# ARG BRANCH=master
-# ADD https://raw.githubusercontent.com/nimbix/notebook-common/${BRANCH}/install-notebook-common /tmp/install-notebook-common
-# RUN bash /tmp/install-notebook-common -b ${BRANCH} -3 && rm /tmp/install-notebook-common
-
-
 # Add Jarvice Desktop
-ARG BRANCH=nimbix-menu-and-panel-fix
+ARG BRANCH=master
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install ca-certificates curl --no-install-recommends && \
     curl -H 'Cache-Control: no-cache' \

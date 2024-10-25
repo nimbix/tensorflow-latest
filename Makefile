@@ -1,4 +1,4 @@
-VERSION := 2.17.0
+VERSION := 2.18.0
 DATE := $(shell date +"%Y-%m-%d")
 IMAGE := us-docker.pkg.dev/jarvice/images/tensorflow:$(VERSION)-$(DATE)
 
