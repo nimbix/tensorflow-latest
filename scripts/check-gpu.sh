@@ -2,6 +2,7 @@
 
 function checkNvidiaDriver() (
     # Now need to check that the driver version is at least the minimum version...
+    # https://www.tensorflow.org/install/pip#software_requirements
     MINIMUM_DRIVER_VERSION=525.60.13
     MIN_MAJOR=$(echo "$MINIMUM_DRIVER_VERSION" | tr '.' ' ' | awk '{print $1}')
     MIN_MINOR=$(echo "$MINIMUM_DRIVER_VERSION" | tr '.' ' ' | awk '{print $2}')

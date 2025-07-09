@@ -1,5 +1,5 @@
 {
-    "name": "TensorFlow 2.18.0",
+    "name": "TensorFlow 2.19.0",
     "description": "Community version of TensorFlow",
     "author": "Nimbix, Inc.",
     "licensed": true,
@@ -11,8 +11,10 @@
     "machines": [
         "ng[1-9]-*",
         "ng[1-9][0-9]-*",
+        "ng[1-9]*",
         "n[1-9]-*",
-        "n[1-9][0-9]-*"
+        "n[1-9][0-9]-*",
+        "n[1-9]*"
     ],
     "vault-types": [
         "FILE",

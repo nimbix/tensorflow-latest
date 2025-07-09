@@ -1,9 +1,9 @@
-FROM tensorflow/tensorflow:2.18.0-gpu
+FROM tensorflow/tensorflow:2.19.0-gpu
 LABEL maintainer="Nimbix, Inc." \
       license="BSD"
 
 # Update SERIAL_NUMBER to force rebuild of all layers (don't use cached layers)
-ARG SERIAL_NUMBER="20241002.1000"
+ARG SERIAL_NUMBER="20250312.1000"
 ENV SERIAL_NUMBER=${SERIAL_NUMBER}
 
 # Install the rest of the packages
@@ -30,4 +30,4 @@ COPY NAE/AppDef.json /etc/NAE/AppDef.json
 COPY NAE/screenshot.png /etc/NAE/screenshot.png
 COPY NAE/license.txt /etc/NAE/license.txt
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://cloud.nimbix.net/api/jarvice/validate
-RUN mkdir -p /etc/NAE && /usr/bin/bash -c "touch /etc/NAE/{screenshot.png,screenshot.txt,license.txt,AppDef.json}"
+RUN mkdir -p /etc/NAE && /usr/bin/bash -c "touch /etc/NAE/{screenshot.png,screenshot.txt,license.txt,AppDef.json,swlicense.txt}"
