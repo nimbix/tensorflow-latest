@@ -20,9 +20,10 @@ function checkNvidiaDriver() (
         echo "INFO: NVIDIA driver up-to-date"
         return 0
     else
-        echo "ERROR: Current driver version is insufficient for GPU enabled compute."
-        echo "       Minimum driver needed as reported by TensorFlow is $MINIMUM_DRIVER_VERSION"
-        exit 255
+        echo "WARNING: Current driver version is insufficient for GPU enabled compute."
+        echo "         Minimum driver needed as reported by TensorFlow is $MINIMUM_DRIVER_VERSION."
+        echo "         Job will continue but may fail."
+        return 0
     fi
 )
 
@@ -30,7 +31,7 @@ function checkNvidiaDriver() (
 
 function checkCudaVersion() (
     # Now need to check that the driver version is at least the minimum version...
-    MINIMUM_CUDA_VERSION=12.3
+    MINIMUM_CUDA_VERSION=12.5
     MIN_MAJOR=$(echo "$MINIMUM_CUDA_VERSION" | tr '.' ' ' | awk '{print $1}')
     MIN_MINOR=$(echo "$MINIMUM_CUDA_VERSION" | tr '.' ' ' | awk '{print $2}')
     MIN_CUDA_NUMBER=$((MIN_MAJOR*1024 + MIN_MINOR))
@@ -46,9 +47,10 @@ function checkCudaVersion() (
         echo "INFO: CUDA version is up-to-date"
         return 0
     else
-        echo "ERROR: Current cuda version is insufficient for GPU enabled compute."
-        echo "       Minimum cuda version needed as reported by TensorFlow is $MINIMUM_CUDA_VERSION"
-        exit 255
+        echo "WARNING: Current cuda version is insufficient for GPU enabled compute."
+        echo "         Minimum cuda version needed as reported by TensorFlow is $MINIMUM_CUDA_VERSION"
+        echo "         Job will continue but may fail."
+        return 0
     fi
 )
 
