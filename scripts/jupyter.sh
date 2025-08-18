@@ -41,7 +41,7 @@ while [[ -n "$1" ]]; do
     -r)
         shift
         REQUIREMENTS="$1"
-        python3.11 -m pip install --user -r $REQUIREMENTS
+        python3.12 -m pip install --user -r $REQUIREMENTS
         ;;
     -u)
         shift
@@ -68,6 +68,6 @@ PORTNUM=${JARVICE_SERVICE_PORT:-5902}
 
 cd /data 2>/dev/null || cd /tmp
 export OMP_NUM_THREADS=$(wc -l /etc/JARVICE/cores | awk '{print $1}')
-python3.11 -m jupyter ${MODE} --ip=0.0.0.0 --no-browser --port=${PORT} \
+python3.12 -m jupyter ${MODE} --ip=0.0.0.0 --no-browser --port=${PORT} \
     --NotebookApp.token=$(cat /etc/JARVICE/random128.txt | cut -c 1-64) \
     --NotebookApp.base_url=${BASEURL}
